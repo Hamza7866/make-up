@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import "../css/Navbar.min.css";
+
 const Navbar = () => {
   const [toggleIcon, setToggleIcon] = useState(false);
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-success bg-info">
+      <nav className="navbar navbar-expand-lg navbar-info bg-secondary fixed-top">
         <div className="container">
-          <a className="navbar-brand" to="/">
+          <a className="navbar-brand text-success" to="/">
             Prettier Shop
           </a>
           <button
@@ -20,12 +21,17 @@ const Navbar = () => {
             onClick={() => setToggleIcon(!toggleIcon)}
           >
             <span
-              className={toggleIcon ? "fas fa-times" : "fas fa-bars"}
+              className={
+                toggleIcon ? "fas fa-times text-info" : "fas fa-bars text-info"
+              }
             ></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 me-5 pe-5">
-              <li className="nav-item">
+          <div
+            className="collapse navbar-collapse text-center"
+            id="navbarSupportedContent"
+          >
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 me-5">
+              <li className="nav-item ">
                 <a className="nav-link active" aria-current="page" to="/">
                   Home
                 </a>
@@ -42,7 +48,7 @@ const Navbar = () => {
               </li>
               <li className="nav-item">
                 <a className="nav-link" to="#">
-                  Mens
+                  Contact
                 </a>
               </li>
             </ul>

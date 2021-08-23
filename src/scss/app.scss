@@ -1,7 +1,7 @@
 $theme-colors: (
   "primary": #055aa4,
   "secondary": #ffaa4c,
-  "success": #f8485e,
+  "success": #b42b51,
   "info": #eeeeee,
   "dark": #082032,
 ) !default;
@@ -16,4 +16,22 @@ $theme-colors: (
 }
 body {
   font-family: "Poppins", sans-serif;
+}
+
+.row .col-md-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row .col-md-4 .btn {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.container .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
